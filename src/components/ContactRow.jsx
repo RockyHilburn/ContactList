@@ -1,6 +1,6 @@
 import React from "react"
 
-export default ContactRow({contact}) {
+export default function ContactRow({contact}) {
     return (
         <tr>
         <td>{contact.name}</td>
@@ -8,4 +8,4 @@ export default ContactRow({contact}) {
         <td>{contact.phone}</td>
       </tr>
     )
-}
+};

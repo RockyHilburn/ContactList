@@ -7,10 +7,9 @@ const dummyContacts = [
     { id: 3, name: "BB-8", phone: "888-888-8888", email: "bb8@droids.com" },
   ];
 
-const [contacts, setContacts] = useState(dummyContacts)
 
 export default function ContactList() {
-    console.log("Contacts: ", contacts)
+    const [contacts, setContacts] = useState(dummyContacts)
     return ( 
         <table>
           <thead>
@@ -24,9 +23,9 @@ export default function ContactList() {
               <td>Email</td>
               <td>Phone</td>
             </tr>
-            {
-               // Map over data here
-             }
+            {contacts.map((contact) => {
+          return <ContactRow key={contact.id} contact={contact} />;
+        })}
           </tbody>
         </table>
     );

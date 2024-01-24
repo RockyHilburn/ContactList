@@ -19,5 +19,5 @@ export default function ContactList() {
              }
           </tbody>
         </table>
-    ); 
+    );
 }
